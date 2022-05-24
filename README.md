@@ -33,18 +33,18 @@ To access this project on your local files, you can clone it using these steps
 
 ### HTTP Methods
 ### End Points
-| URL                    | HTTP VERB | DESCRIPTION                            |
-|------------------------|-----------|----------------------------------------|
-| /department/new        | POST      | Add a new department                   |
-| /departments           | GET       | Get all departments                    |
-| /departments/:id       | GET       | Get specific department by its id      |
-| /users/new             | POST      | Add a user                             |
-| /users                 | GET       | Get all users                          |
-| /users/:id             | GET       | Get a user by their id                 |
+| URL                | HTTP VERB | DESCRIPTION                            |
+|--------------------|-----------|----------------------------------------|
+| /department/new    | POST      | Add a new department                   |
+| /departments       | GET       | Get all departments                    |
+| /departments/:id   | GET       | Get specific department by its id      |
+| /users/new         | POST      | Add a user                             |
+| /users             | GET       | Get all users                          |
+| /users/:id         | GET       | Get a user by their id                 |
 | /departments/:id/users | GET       | Get all users in a specific department |
-| /news/new              | POST      | Add news                               |
-| /news                  | GET       | Get all news                           |
-| /news/:id              | GET       | Get news by id                         |
+| /news/new          | POST      | Add news                               |
+| /                  | GET       | Get all news                           |
+| /news/:id          | GET       | Get news by id                         |
 
 
 ### API Documentation
