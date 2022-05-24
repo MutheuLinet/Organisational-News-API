@@ -33,15 +33,42 @@ To access this project on your local files, you can clone it using these steps
 
 ### HTTP Methods
 ### End Points
-| URL                   | HTTP VERB   | DESCRIPTION                            |
-|-----------------------|-------------|----------------------------------------|
-| /department/new       | POST        | Add a new department                   |
-| /departments          | GET         | Get all departments                    |
-| /departments/:id      | GET         | Get specific department by its id      |
-| /users                | GET         | Get all users                          |
-| /department/:id/users | GET         | Get all users in a specific department |
-| /news/new             | POST        | Add news                               |
+| URL                    | HTTP VERB | DESCRIPTION                            |
+|------------------------|-----------|----------------------------------------|
+| /department/new        | POST      | Add a new department                   |
+| /departments           | GET       | Get all departments                    |
+| /departments/:id       | GET       | Get specific department by its id      |
+| /users/new             | POST      | Add a user                             |
+| /users                 | GET       | Get all users                          |
+| /users/:id             | GET       | Get a user by their id                 |
+| /departments/:id/users | GET       | Get all users in a specific department |
+| /news/new              | POST      | Add news                               |
+| /news                  | GET       | Get all news                           |
+| /news/:id              | GET       | Get news by id                         |
 
+
+### API Documentation
+1. Creating Department 
+
+{  "name":"HR",
+   "description":"Editing of books",
+   "size": 10 }
+
+2. Creating User
+
+{  "name":"Stacy",
+   "position":"Assistant HR",
+   "role":"Recruit employees",
+   "department_id": 1 }
+
+3. Creating News
+
+{  "title":"How to Motivate Employees",
+   "content":"Revise employee hierarchy of needs",
+   "department_id": 1 }
+
+{  "title":"How to Retain Clients",
+   "content":"Revise your marketing skills" }
 
 ### Contribution
 You may also want to contribute to enhance a functionality:
@@ -64,7 +91,7 @@ The user is able to;
 1. Navigate to the folder you cloned into, within src/test/java/models and open it with intellij. Select the DepartmentTests, UserTests or NewsTest
 2. Right click within the open test file and run the tests on your terminal.
 
-### SQL
+### DATABASE
 1. Launch postgres
 2. Type in psql
    Run these commands
