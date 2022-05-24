@@ -150,6 +150,23 @@ public class App {
             return gson.toJson(sql2oNewsDao.findById(newsId));
         });
 
+        //Create news relating to a department
+        post("department/:departmentId/news/new", "application/json", (request, response) -> {
+            int departmentId = Integer.parseInt(request.params("departmentId"));
+            News news = gson.fromJson(request.body(), News.class);
+            news.setDepartment_id(departmentId);
+            sql2oNewsDao.add(news);
+            response.status(201);
+            return gson.toJson(news);
+        });
+
+        //View all news belonging to a department
+        get("department/:id/news", "application/json", (request, response) -> {
+            int departmentId = Integer.parseInt(request.params("id"));
+            Department department = sql2oDepartmentDao.findById(departmentId);
+            List<News> allNews = sql2oNewsDao.allNewsInDepartment(departmentId);
+            return gson.toJson(allNews);
+        });
         after((req, res) ->{
             res.type("application/json");
         });
