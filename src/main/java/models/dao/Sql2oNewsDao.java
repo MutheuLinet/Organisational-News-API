@@ -52,7 +52,7 @@ public class Sql2oNewsDao implements NewsDao {
         String sql = "SELECT * FROM news WHERE department_id = :department_id";
         try (Connection connection = sql2o.open()){
             return connection.createQuery(sql)
-                    .addParameter("departmentId", department_id)
+                    .addParameter("department_id", department_id)
                     .executeAndFetch(News.class);
         }
     }
