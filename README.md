@@ -33,18 +33,20 @@ To access this project on your local files, you can clone it using these steps
 
 ### HTTP Methods
 ### End Points
-| URL                    | HTTP VERB | DESCRIPTION                            |
-|------------------------|-----------|----------------------------------------|
-| /department/new        | POST      | Add a new department                   |
-| /departments           | GET       | Get all departments                    |
-| /departments/:id       | GET       | Get specific department by its id      |
-| /users/new             | POST      | Add a user                             |
-| /users                 | GET       | Get all users                          |
-| /users/:id             | GET       | Get a user by their id                 |
-| /departments/:id/users | GET       | Get all users in a specific department |
-| /news/new              | POST      | Add news                               |
-| /                      | GET       | Get all news                           |
-| /news/:id              | GET       | Get news by id                         |
+| URL(http://localhost:4567{URL Below}) | HTTP VERB | DESCRIPTION                            |
+|---------------------------------------|-----------|----------------------------------------|
+| /department/new                       | POST      | Add a new department                   |
+| /departments                          | GET       | Get all departments                    |
+| /departments/:id                      | GET       | Get specific department by its id      |
+| /users/new                            | POST      | Add a user                             |
+| /users                                | GET       | Get all users                          |
+| /users/:id                            | GET       | Get a user by their id                 |
+| /departments/:id/users                | GET       | Get all users in a specific department |
+| /news/new                             | POST      | Add news                               |
+| /                                     | GET       | Get all news                           |
+| /news/:id                             | GET       | Get news by id                         |
+| /department/:departmentId/news/new    | POST      | Post department news by department id  |
+| /department/:departmentId/news        | GET       | Get department news by department id   |
 
 
 ### API Documentation
@@ -58,13 +60,13 @@ To access this project on your local files, you can clone it using these steps
 
 {  "name":"Stacy",
    "position":"Assistant HR",
-   "role":"Recruit employees",
+   "role":"Recruit employees"
 }
 
 3. Creating News
   
 {  "title":"How to Motivate Employees",
-   "content":"Revise employee hierarchy of needs",
+   "content":"Revise employee hierarchy of needs"
 }
 
 ### Contribution
