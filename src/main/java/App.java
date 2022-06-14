@@ -161,10 +161,10 @@ public class App {
         });
 
         //View all news belonging to a department
-        get("department/:id/news", "application/json", (request, response) -> {
-            int departmentId = Integer.parseInt(request.params("id"));
-            Department department = sql2oDepartmentDao.findById(departmentId);
-            List<News> allNews = sql2oNewsDao.allNewsInDepartment(departmentId);
+        get("department/:departmentId/news", "application/json", (request, response) -> {
+            int department_id = Integer.parseInt(request.params("departmentId"));
+            Department department = sql2oDepartmentDao.findById(department_id);
+            List<News> allNews = sql2oNewsDao.allNewsInDepartment(department_id);
             return gson.toJson(allNews);
         });
         after((req, res) ->{
